@@ -1,5 +1,5 @@
 (function () {
-    async function getData() {
+     function getData() {
         return fetch("https://randomuser.me/api/");
     }
     async function convertData() {
@@ -33,7 +33,7 @@
 
     document.getElementById("btnO").onclick=function(){
         const {from}=rxjs;
-        const{map,flatMap,mergeAll}=rxjs.operators;
+        const{map,flatMap}=rxjs.operators;
        const data$= from(fetch("https://randomuser.me/api/"));
        data$.pipe(
         flatMap(el=> el.json()),
