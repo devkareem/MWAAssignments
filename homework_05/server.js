@@ -8,13 +8,15 @@ app.enable('trust proxy');
 app.enable('strict routing');
 app.set('etag','strong');
 app.set('x-powered-by',false);
-
+app.set('Cashe-Control','private , max-age=86400');
 app.get('/users',function(req,res){
     const obs= from(axios.get('https://randomuser.me/api/?results=10'));
     obs.pipe(
         shareReplay(1)
     ).subscribe((data)=>{
-        res.set('link','<https://randomuser.me/api/?page=2&results=10&seed=abc>; rel="next"');
+        res.set({'link':'<https://randomuser.me/api/?page=2&results=10&seed=abc>; rel="next"',
+        'Cashe-Control':'private , max-age=86400'
+    });
         res.json(data.data.results);
         res.end();
     });
