@@ -1,0 +1,15 @@
+GET http://localhost:8020/api/grades/ HTTP/1.1
+#####
+GET http://localhost:8020/api/grades/1 HTTP/1.1
+#####
+POST http://localhost:8020/api/grades/ HTTP/1.1
+content-type: application/json
+
+{"id":0,"name":"Hamza Kareem Said","course":"CS572","grade":200}
+#####
+DELETE http://localhost:8020/api/grades/4 HTTP/1.1
+#####
+POST http://localhost:8020/api/grades/ HTTP/1.1
+//content-type: application/json
+
+"id":0,"name":"Hamza Kareem Said","course":"CS572","grade":200
