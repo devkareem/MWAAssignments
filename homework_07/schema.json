@@ -1,0 +1,36 @@
+{
+    "Books": [
+        {
+            "ISBN": "1111",
+            "author": {
+                "name": "xxx"
+            },
+            "tags": [
+                "tag1",
+                "tag2"
+            ]
+        }
+    ],
+    "Students": [
+        {
+            "name": "cccc",
+            "studentId": "77777",
+            "books": [
+                {
+                    "book": {
+                        "ISBN": "1111",
+                        "author": {
+                            "name": "xxx"
+                        },
+                        "tags": [
+                            "tag1",
+                            "tag2"
+                        ]
+                    },
+                    "returnDate": "6/5/2018",
+                    "isReturn": false
+                }
+            ]
+        }
+    ]
+}

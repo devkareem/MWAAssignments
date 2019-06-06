@@ -1,0 +1,13 @@
+GET http://localhost:8050/lectures/ HTTP/1.1
+####
+GET http://localhost:8050/lectures/5cf81cca2879ec3a00235490 HTTP/1.1
+####
+POST http://localhost:8050/lectures/ HTTP/1.1
+content-type: application/json
+
+{"course":"CS572","lecture":"first"}
+#####
+DELETE http://localhost:8050/lectures/5cf81ca5406efd0cc48b6bdb HTTP/1.1
+
+####
+GET http://localhost:8050/search/first HTTP/1.1
