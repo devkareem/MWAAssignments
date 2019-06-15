@@ -10,7 +10,16 @@ import { Subscription } from 'rxjs';
       userdetails works!
     </p>
 {{user?.gender}}
-
+<h1> User Details</h1>
+<img src="{{user?.picture.large}}" />
+<table>
+<tr>
+<td>Name : {{user?.name.title}} / {{user?.name.first}} {{user?.name.last}}</td><td>Gender : {{user?.gender}}</td><td>Email : {{user?.email}}</td><td>Phone :{{user?.phone}}</td>
+</tr>
+<tr>
+<td>Cell : {{user?.cell}}</td><td>Address : {{user?.location.street}} - {{user?.location.city}} - {{user?.location.state}} - {{user?.location.postcode}}</td><td>Date of Birth : {{user?.dob.date}}</td><td>Age :{{user?.dob.age}}</td>
+</tr>
+</table>
   `,
   styles: []
 })

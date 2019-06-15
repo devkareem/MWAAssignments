@@ -18,7 +18,6 @@ import { Observable, Subscription } from 'rxjs';
       </tr>
     </table>
     <router-outlet></router-outlet>
-
   `,
   styles: []
 })
